@@ -1,0 +1,35 @@
+issued_service_users:
+
+  - !!models.entities.IssuedServiceUser
+    serviceName: テストサービス
+    apiKey: 2jijdlkrleKfewajo12143349821ufaj
+
+users:
+
+  - &Ibonco !!models.entities.User
+    name: コンボイ
+    mail: conboi@sample.com
+
+  - &Mega !!models.entities.User
+    name: メガトロン
+    mail: megatolon@sample.com
+
+  - &Star !!models.entities.User
+    name: スタースクリーム
+    mail: star-sqrium@sample.com
+
+authentications:
+  - !!models.entities.Authentication
+    loginId: conboi@sample.com
+    password: $2a$10$.uRtQDf919fLCWbdtsoTN.GiK1HhWb1T7SM3w2ZOr/r8Py42E8L1u
+    user: *Ibonco
+
+  - !!models.entities.Authentication
+    loginId: megatolon@sample.com
+    password: $2a$10$YNj3kSzl45tY/AkR4iF1muN78M7MAqUOdfWaAIELQBvR20I8wPNkS
+    user: *Mega
+
+  - !!models.entities.Authentication
+    loginId: star-sqrium@sample.com
+    password: $2a$10$hGcIUknCvVUFJclD9vzlPON22NPsPTY9dncJkT8B/U/Lhl5Dww52i
+    user: *Star
